@@ -21,6 +21,7 @@ header {
     position: fixed;
     top: 0;
     left: 0;
+    height: auto;
     width: 100%;
     padding: 1% 2%;
     background-color: rgb(80, 104, 190);
@@ -30,7 +31,7 @@ header {
     z-index: 100;
 }
 
-.navbar a, h1{
+.navbar a{
     font-size: 19.5px;
     color: white;
     font-weight: bold;
@@ -40,28 +41,94 @@ header {
     transition: color 0.3s ease 0s;
 }
 
+header h1 {
+    font-size: 30px;
+    color: white;
+    font-weight: bold;
+    font-family: "Montserrat", sans-serif;
+    margin-left: 30px;
+}
+
+
 .navbar a:hover {
     color:hsl(140, 100%, 80%);
 }
 
 
-.home .navbar a#active {
+.homePage .navbar a#active {
     border: 4px solid hsl(227, 46%, 43%);
     padding: 5px;
     background: hsl(227, 46%, 63%);
+    border-radius: 15px;
+    box-shadow: 2px 2px 3px black;
+}
+
+.favoritesPage .navbar a#active {
+    border: 4px solid hsl(227, 46%, 43%);
+    padding: 5px;
+    background: hsl(227, 46%, 63%);
+    border-radius: 15px;
+    box-shadow: 2px 2px 3px black;
+}
+
+.supportPage .navbar a#active {
+    border: 4px solid hsl(227, 46%, 43%);
+    padding: 5px;
+    background: hsl(227, 46%, 63%);
+    border-radius: 15px;
+    box-shadow: 2px 2px 3px black;
+}
+
+
+.searchBar {
+    width: max-content;
+    align-items: center;
+    display: flex;
+    padding: 5px;
+    border: 4px solid hsl(227, 46%, 39%);
+    background-color: white;
     border-radius: 15px;
 }
 
-.favorites .navbar a#active {
-    border: 4px solid hsl(227, 46%, 43%);
-    padding: 5px;
-    background: hsl(227, 46%, 63%);
-    border-radius: 15px;
+.searchBar #searchBox {
+    font-size: 16px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-weight: bold;
+    color: black;
+    margin-left: 5px;
 }
 
-.support .navbar a#active {
-    border: 4px solid hsl(227, 46%, 43%);
-    padding: 5px;
-    background: hsl(227, 46%, 63%);
-    border-radius: 15px;
+.searchBar .searchIcon {
+    padding-left: 5px;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    text-align: center;
+    cursor: pointer;
+}
+
+.searchBar #searchBox::placeholder {
+    color: black;
+}
+
+
+main {
+    margin-top: 10%;
+    display: flex;
+    padding-left: 2%;
+}
+
+.tile {
+    background-color: #dbdbdb;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 33%;
+    box-shadow: ;
+}
+
+.tile i {
+    float: right;
+    padding-top: 2%;
 }
